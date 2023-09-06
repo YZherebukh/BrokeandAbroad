@@ -21,7 +21,8 @@ func (c *Counter) Increment() {
 }
 
 func (c *Counter) Value() uint32 {
-	return c.val.Load()
+	v := c.val.Load()
+	return v
 }
 
 func main() {
